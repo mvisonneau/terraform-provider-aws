@@ -1544,7 +1544,6 @@ func flattenConfigSnapshotDeliveryProperties(p *configservice.ConfigSnapshotDeli
 	return []map[string]interface{}{m}
 }
 
-// TODO This should really be named 'pointersMapToStringMap'?
 func pointersMapToStringList(pointers map[string]*string) map[string]interface{} {
 	list := make(map[string]interface{}, len(pointers))
 	for i, v := range pointers {
@@ -1553,7 +1552,6 @@ func pointersMapToStringList(pointers map[string]*string) map[string]interface{}
 	return list
 }
 
-// TODO This should really be named 'stringMapToPointersMap'?
 func stringMapToPointers(m map[string]interface{}) map[string]*string {
 	list := make(map[string]*string, len(m))
 	for i, v := range m {
